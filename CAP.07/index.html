@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cálculo de Duração da Viagem</title>
+  <script>
+    function calcularDuracao() {
+      var dias = parseInt(document.getElementById('dias').value);
+      var horas = parseInt(document.getElementById('horas').value);
+
+      var totalHoras = (dias * 24) + horas;
+
+      document.getElementById('resultado').innerHTML = 'Total de horas: ' + totalHoras;
+    }
+  </script>
+</head>
+<body>
+  <h1>Cálculo de Duração da Viagem</h1>
+  <label for="dias">Nº de dias:</label>
+  <input type="number" id="dias"><br>
+  <label for="horas">Nº de horas:</label>
+  <input type="number" id="horas"><br>
+  <button onclick="calcularDuracao()">Calcular</button><br>
+  <div id="resultado"></div>
+</body>
+</html>

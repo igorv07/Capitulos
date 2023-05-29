@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo da Média</title>
+</head>
+<body>
+    <h1>Cálculo da Média</h1>
+    <label for="nota1">Digite a primeira nota:</label>
+    <input type="text" id="nota1" placeholder="Ex: 7.0"><br><br>
+    
+    <label for="nota2">Digite a segunda nota:</label>
+    <input type="text" id="nota2" placeholder="Ex: 8.0"><br><br>
+    
+    <button onclick="calcularMedia()">Calcular Média</button><br><br>
+    
+    <p id="media"></p>
+    
+    <script>
+        function calcularMedia() {
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            
+            var media = (nota1 + nota2) / 2;
+            
+            document.getElementById("media").innerHTML = "A média das notas é: " + media.toFixed(1);
+        }
+    </script>
+</body>
+</html>
+Neste exemplo, utilizamos elementos HTML como <input> para que o usuário possa digitar as notas, um <button> para acionar o cálculo da média e um <p> com o id="media" para exibir o resultado.
+
+A função calcularMedia() é chamada quando o botão é clicado. Ela recupera os valores digitados nas caixas de texto usando document.getElementById().value, converte esses valores para números decimais usando parseFloat(), calcula a média e exibe o resultado usando toFixed(1) para formatar a média com uma casa decimal. O resultado é exibido no <p> com o id="media" usando document.getElementById().innerHTML.
+
+
+
+
+
